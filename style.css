@@ -64,6 +64,9 @@ h1{
     right: 20px;
     bottom: 10px;
 }
+.btn{
+    visibility: hidden;
+}
 
 /* --------------------------apres le header------------------ */
 
@@ -116,6 +119,7 @@ align-items: center
     background-color: #F2FDFF;
     box-shadow: 0px 3px 10px 3px rgba(142, 131, 131, 0.97);
 }
+
 
 /* ---------------------- footer---------------------- */
 
@@ -284,7 +288,7 @@ footer {
             align-content:center ;
             background-color: #170312;
             width: 100%;
-            
+            visibility:visible;
             
             
         }
