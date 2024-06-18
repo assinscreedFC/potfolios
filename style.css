@@ -123,7 +123,7 @@ align-items: center
 footer {
       margin-top: 50px;
       border-top: 10px solid #49A078;
-      background-color: #235789;  
+      background: linear-gradient(0deg, #235789, #8B4513);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -163,18 +163,30 @@ footer {
         object-fit: cover;
         box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
     }
-    
     .fa-github {
+     
+        font-size: 34px;
+        transition: transform 0.3s ease-in-out;
+        color: #170312;
+    
+      }
+      
+      .fa-github:hover {
+        transform: rotate(360deg) scale(1.2);
+        color: #170312;
+      }
+    
+    footer .fa-github {
      
       font-size: 34px;
       transition: transform 0.3s ease-in-out;
-      color: #170312;
+      color: #F2FDFF;
   
     }
     
-    .fa-github:hover {
+    footer .fa-github:hover {
       transform: rotate(360deg) scale(1.2);
-      color: #170312;
+      color: #F2FDFF;
     }
     a{
         text-decoration: none;
@@ -217,7 +229,8 @@ footer {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        gap:30px
+        gap:30px;
+        color: #235789;
     }
     
 }
