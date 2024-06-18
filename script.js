@@ -1,5 +1,7 @@
 const cont=document.querySelector(".container");
 const image=cont.querySelectorAll(".icone");
+const imgcard=cont.querySelectorAll("img");
+
 
 
 // async function setTEmps(code,svgContainer) {
@@ -27,3 +29,9 @@ image.forEach(element => {
   element.innerHTML+="<img src=\"./assets/share-all.svg\" alt=\"\" width=\"34\"  height=\"24\">"
 });
    
+imgcard.forEach(element => {
+
+ element.src= "./assets/sasuke.jpeg" ;
+
+
+});
