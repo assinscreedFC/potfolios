@@ -121,8 +121,8 @@ align-items: center
 /* ---------------------- footer---------------------- */
 
 footer {
-    margin-top: 50px;
-    border-top: 10px solid #49A078;
+      margin-top: 50px;
+      border-top: 10px solid #49A078;
       background-color: #235789;  
       display: flex;
       flex-direction: column;
@@ -189,4 +189,35 @@ footer {
         gap: 10px;
         justify-items: center;
     }
+    .header-box{
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        position: relative;
+    }
+    .sasuke{
+        position: relative;
+        bottom: -30px;
+        max-width: 30%;
+    }
+    .content-header{
+        width: 100%;
+    }
+    .dictature{
+        
+        width: 100%;
+    }
+}
+@media screen and (max-width:700px) {
+    .dictature{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:30px
+    }
+    
 }
