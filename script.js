@@ -38,3 +38,16 @@ imgcard.forEach(element => {
 
 
 });
+
+function toggleContent() {
+  var content = document.querySelector('.content-header');
+  var button = document.getElementById('toggleButton');
+
+  if (content.classList.contains('expanded')) {
+      content.classList.remove('expanded');
+      button.textContent = 'Learn More';
+  } else {
+      content.classList.add('expanded');
+      button.textContent = 'Show Less';
+  }
+}

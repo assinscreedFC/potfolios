@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouton Learn More avec Dégradé d'Opacité</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(0deg, #235789, #8B4513, #49A078);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .content {
+            max-height: 50px;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .content p {
+            position: relative;
+            margin: 0;
+            padding: 15px 0; /* Ajouter un peu d'espacement pour le dégradé */
+        }
+
+        .content p::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30px; /* Hauteur du dégradé */
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+            pointer-events: none;
+        }
+
+        .expanded {
+            max-height: 1000px; /* Ajustez cette valeur en fonction de la hauteur totale du contenu */
+        }
+
+        .expanded p::after {
+            display: none;
+        }
+
+        .button {
+            background-color: #49A078;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #3e8e41;
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        function toggleContent() {
+            var content = document.getElementById('content');
+            var button = document.getElementById('toggleButton');
+
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                button.textContent = 'Learn More';
+            } else {
+                content.classList.add('expanded');
+                button.textContent = 'Show Less';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="content" class="content">
+        <p>
+            Ceci est une section de contenu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Curabitur vel lorem nec nisi malesuada cursus. Phasellus sed eros magna. Proin vehicula 
+            sapien nec arcu consectetur, et scelerisque odio facilisis. Duis vel neque velit. Aliquam erat 
+            volutpat. Sed a suscipit purus. Curabitur sit amet quam a metus ultrices dapibus.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel lorem nec nisi 
+            malesuada cursus. Phasellus sed eros magna. Proin vehicula sapien nec arcu consectetur, 
+            et scelerisque odio facilisis. Duis vel neque velit. Aliquam erat volutpat. Sed a suscipit purus. 
+            Curabitur sit amet quam a metus ultrices dapibus.
+        </p>
+    </div>
+    <button id="toggleButton" class="button" onclick="toggleContent()">Learn More</button>
+</body>
+</html>

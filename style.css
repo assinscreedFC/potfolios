@@ -34,7 +34,6 @@ header{
     width: 75%;
     display: flex;
     flex-direction: column;
-   
     justify-content: center;
 }
 .text-header{
@@ -216,7 +215,6 @@ footer {
         width: 100%;
     }
     .dictature{
-        
         width: 100%;
     }
 }
@@ -232,5 +230,63 @@ footer {
         gap:30px;
         color: #235789;
     }
+    
+
+    .button {
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-content:center ;
+        color: white;
+        width: fit-content;
+        border: none;
+        padding: 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        
+        cursor: pointer;    
+        transition: color 0.3s, transform 0.3s;
+    }
+
+    .button:hover {
+        color: #3e8e41;
+        transform: scale(1.05);
+    }
+
+    .content-header {
+            max-height: 200px;
+            overflow-y: hidden;
+            position: relative;
+            border-radius: 5% 5% 0 0;
+            justify-content: flex-start;
+            
+            transition: max-height 1.5s ease-out;
+        }
+
+        
+
+        .expanded {
+            max-height: 1000px; /* Ajustez cette valeur en fonction de la hauteur totale du contenu */
+            
+        }
+        .expanded p::after {
+            display: none;
+        }
+
+        .expanded::after {
+            display: none;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-content:center ;
+            background-color: #170312;
+            width: 100%;
+            
+            
+            
+        }
     
 }
