@@ -168,11 +168,25 @@ footer {
      
       font-size: 34px;
       transition: transform 0.3s ease-in-out;
-      color: white;
+      color: #170312;
   
     }
     
     .fa-github:hover {
       transform: rotate(360deg) scale(1.2);
-      color: white;
+      color: #170312;
     }
+    a{
+        text-decoration: none;
+    }
+
+@media  screen and (max-width:1010px){
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 10px;
+        justify-items: center;
+    }
+}

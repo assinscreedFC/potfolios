@@ -25,7 +25,10 @@ const imgcard=cont.querySelectorAll("img");
 //     setTEmps("share-all.svg",image);
 
 image.forEach(element => {
-  element.innerHTML+="<img src=\"./assets/github.svg\" alt=\"\" width=\"34\"  height=\"24\" >"
+  element.innerHTML+=`<a href="https://github.com/assinscreedFC"        target="_blank">
+                      <i class="fab fa-github"></i>
+                      </a>`
+  // "<img src=\"./assets/github.svg\" alt=\"\" width=\"34\"  height=\"24\" >"
   element.innerHTML+="<img src=\"./assets/share-all.svg\" alt=\"\" width=\"34\"  height=\"24\">"
 });
    
