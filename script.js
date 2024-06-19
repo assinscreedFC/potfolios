@@ -40,8 +40,8 @@ imgcard.forEach(element => {
 });
 
 function toggleContent() {
-  var content = document.querySelector('.content-header');
-  var button = document.getElementById('toggleButton');
+  let content = document.querySelector('.content-header');
+  let button = document.getElementById('toggleButton');
 
   if (content.classList.contains('expanded')) {
       content.classList.remove('expanded');
@@ -49,5 +49,20 @@ function toggleContent() {
   } else {
       content.classList.add('expanded');
       button.textContent = 'Show Less';
+  }
+}
+
+function toggleCard() {
+  let content = document.querySelector('.container');
+  let spane=document.querySelectorAll(".codepen-button");
+
+  if (content.classList.contains('expandeddude')) {
+      content.classList.remove('expandeddude');
+      spane[0].style.display="block";
+      spane[1].style.display="none";
+  } else {
+      content.classList.add('expandeddude');
+      spane[1].style.display="block";
+      spane[0].style.display="none";
   }
 }
