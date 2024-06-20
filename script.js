@@ -33,7 +33,7 @@ const imgcard=cont.querySelectorAll(".image");
 // });
    
 imgcard.forEach(element => {
-let gims =element.queryselrctor("img");
+let gims =element.querySelector("img");
  gims.src= "./assets/sasuke.jpeg" ;
 
 
