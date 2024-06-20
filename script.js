@@ -1,6 +1,6 @@
 const cont=document.querySelector(".container");
 const image=cont.querySelectorAll(".icone");
-const imgcard=cont.querySelectorAll("img");
+const imgcard=cont.querySelectorAll(".image");
 
 
 
@@ -33,8 +33,8 @@ const imgcard=cont.querySelectorAll("img");
 // });
    
 imgcard.forEach(element => {
-
- element.src= "./assets/sasuke.jpeg" ;
+let gims =element.queryselrctor("img");
+ gims.src= "./assets/sasuke.jpeg" ;
 
 
 });
